@@ -1,6 +1,6 @@
 defmodule Examples.Modules.Extract do
   def inline do
-    Enum.each(name(), fn name ->
+    Enum.each(names(), fn name ->
       capitalized = String.capitalize(name)
       phrase = "Hello #{capitalized}"
       IO.puts(phrase)
@@ -8,7 +8,7 @@ defmodule Examples.Modules.Extract do
   end
 
   def extracted do
-    Enum.each(name(), & print_name/1)
+    Enum.each(names(), & print_name/1)
   end
 
   def print_name(name) do
